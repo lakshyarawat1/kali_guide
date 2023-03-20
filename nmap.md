@@ -24,6 +24,9 @@
 - -p : select the ports to scan
 - -p- : scan all ports
 - --script : to activate the script from nmap scripting library
+- -f : used to fragment a packet making it less likely to be detected by the firewall
+- -mtu : alternative to -f switch, provides more control over size of the fragment, very useful when network is unstable
+- --scan-delay <time>ms :
 
 # Important types of scans
 
@@ -89,3 +92,15 @@ Last 3 scans are used for firewall evasion because firewall drops syn packets.
 - written in Lua Programming Language
 - many categories of scripts are there like safe, brute etc.
 - --script switch to use scripts
+
+
+# Firewall Evasion
+
+- by doing NULL, FIN or XMAS scans
+- typical windows firewall blocks all ICMP packets
+- nmap as default, marks the firewalled system as dead and doesnot scan it at all.
+- -Pn switch of nmap tells it not to bother pinging the target before scanning it
+- nmap treats the host as alive
+- if the host is dead then nmap still checks all the ports 
+
+- if you are already inside the network then you can use ARP requests to determine user activity.
