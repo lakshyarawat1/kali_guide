@@ -25,8 +25,9 @@
 - -p- : scan all ports
 - --script : to activate the script from nmap scripting library
 - -f : used to fragment a packet making it less likely to be detected by the firewall
-- -mtu : alternative to -f switch, provides more control over size of the fragment, very useful when network is unstable
-- --scan-delay <time>ms :
+- -mtu : alternative to -f switch, provides more control over size of the fragment
+- --scan-delay : used to add a delay between packets sent, very useful when network is unstable
+- -badsum : used to generate in invalid checksum for packets. Firewalls may respond to these types of requests. Thus it is used for firewall detection
 
 # Important types of scans
 
