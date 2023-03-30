@@ -148,3 +148,12 @@ It is a security vulnerability which allows the attacker to execute malicious sc
 - ***Deserialization*** is the reverse of this, converting serialized info into objects.
 - Insecure deserialization occurs when data from an untrusted website gets executed because there is no validation or filtering.
 
+### Cookies
+
+- Cookies stores usernames and passwords and other information , but they are mostly temporary and ends after some time. 
+- Some important attributes of cookies are :
+    - Cookies Name : Name of the cookie to be set
+    - Cookie Value : Value of the cookie, plaintext or encoded
+    - Secure Only : If set, cookies will be only set over HTTPS
+    - Expiry : Timestamp of the cookie to expire
+    - Path : Specific URL which sets the cookie
