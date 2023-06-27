@@ -6,7 +6,11 @@
 - Every computer has a total of 65535 available ports;
 - 1024 ports are considered as well known ports
 
+## Some terminologies
 
+- Network Segment : A group of computers connected using shared medium.
+- The medium may be Ethernet switch or WiFi access point.
+- Sub Network
 
 # Important NMAP switches
 
