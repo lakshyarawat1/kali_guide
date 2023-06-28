@@ -40,7 +40,7 @@
 ## Metasploit Modules
 
 - Modules are prepared scripts for a specific purpose
-- `` exploit `` category consists of so-called ``proof-of-concept`` POCs that can be used to exploit existing vulnerabilities.
+- __exploit__ category consists of so-called __proof-of-concept__ POCs that can be used to exploit existing vulnerabilities.
 - Most exploits doesnot run on their own, they need customization for being effective.
 
 ### Index no.
@@ -62,3 +62,39 @@
     - Post : Wide array modules to gather information, pivot deeper, etc.
 
 - To use any module use : ``` use <no. > ``` command.
+
+### OS
+
+- The OS tag specifies which operating system and architecture the module was created for.
+
+### Service
+
+- The ``service`` tag referes to the vulnerable service that is running on the target machine.
+
+
+### Name
+
+- Name tag explains the actual action that can be performed using the module
+
+## Searching for modules
+
+### MSF - Search Function
+
+- Metasploit has search function for searching existing modules.
+- An example for msf search command :
+
+    - If we want to search the exploit eternalRomance for older windows OS.
+    - Command : ``` msf6 > search eternalromance ```
+
+    - For searching by type : 
+    - Command :  ``` msf6 > search eternalromance type:exploit ```
+
+- For more specific searches, we can search by titles and options
+- ``` search type:exploit platform:windows cve:2021 rank:excellent microsoft ```
+
+## Module Selection
+
+- Lets use __EternalRomance(MS17_010)__ exploit.
+- We first scan the target for vulnerability and choose the best exploit for it.
+- Now boot up the msfconsole.
+- `search ms17_010`
