@@ -35,3 +35,35 @@
 - 200 Ok will be the successful login.
 - Take the password from 200 OK request and login.
 
+3. Accessing administration section (__2 Star__)
+
+- Open the Debugger ( in Firefox ) and Sources ( in Chrome ).
+- Refresh the page and see the __main.js__ file.
+- Go to /main.js file.
+- Find `path:administration` in main.js file.
+- This shows that admin panel is at /administration route of the app.
+- Login as admin using the password or by bypassing the login.
+- Go to the /administration page.
+
+4. Viewing other person's cart (__2 Star__)
+
+- Log In with any account and open your basket.
+- Capture the request using burpsuite.
+- Change the destination from basket/1 to basket/2
+- Forward the request.
+
+- You will see the other profile's basket.
+
+5. Perform a reflected XSS attack (__2 Star__)
+
+- Login as admin
+- Go to orders history page.
+- Click on the truck icon
+- This led you to the tracking your order page.
+- See the url : ` .....id=5012_31491 `
+- Replace the value of the id with the following code.
+    - ``<iframe src="javascript:alert(`xss`)" > ``
+
+- __Explanation__ :
+    - The server looks for the id of the order in the database.
+    - This query is not sanitized thus vulnerable to xss.
