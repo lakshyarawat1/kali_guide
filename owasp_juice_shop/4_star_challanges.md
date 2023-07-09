@@ -22,3 +22,11 @@
 - Logout from the account and capture the logout request.
 - See the request headers.
 - Add a new header to the request, **True-client-IP** : `` <iframe src="javascript:alert(`xss`)" > ``
+
+3. Access backup files (__4 star__)
+
+- Go to **http://localhost:3000/#/ftp**.
+- Try to download any non .md or .pdf file.
+- Perform a Null byte attack to download the file.
+
+4. 

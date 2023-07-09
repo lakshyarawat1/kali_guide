@@ -67,3 +67,38 @@
 - __Explanation__ :
     - The server looks for the id of the order in the database.
     - This query is not sanitized thus vulnerable to xss.
+
+
+6. Deprecated Interface (__2 Star__)
+
+- Use a deprecated B2B interface that was not properly shut down.
+- Login as any user.
+- Go to the complain section and fill the complain form.
+- Click on file upload button.
+- You will see that only PDF and ZIP files can be uploaded.
+- Trying to upload another file will probably give you an error message on the UI stating Forbidden File type.
+- Open the main.js file in the devTools and file allowedMIMEType and you will notice "application/xml" and "text/xml" along with the expected pdf and zip files.
+- This means that we can add xml file to the system.
+- Try to choose any XML file.
+- The auto Filter will remove any other file without pdf and zip extension.
+- Choose show all files, and choose any xml file available.
+- Upload the file and submit the form to solve the challange.
+
+7. Five-star Feedback (__2 Star__)
+
+- Get rid of all five star ratings from the web app.
+- Solve the **access administration page** challange.
+- Go to the admin page.
+- Manually delete any 5 star ratings from the list of ratings.
+
+8. Login MC Safesearch (__2 Star__)
+
+- Log In with MC Safesearch's original user credentials
+- Google mc safesearch and get to the music "Protect Ya' Passwordz".
+- Watching the video we get to know that MC used the name of his dog "Mr.Noodles" as the password.
+- He later changed the o's in the password with 0's.
+- So the password will be "Mr. N00dles".
+- Login as this password to solve the challange.
+- This is an example of sensitive data exposure.
+
+9. 
