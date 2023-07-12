@@ -49,9 +49,32 @@ There are two ways to do so
 - Uses a proxyed chromium browser
 
 
-## Scoping and targetting
+## Scoping and Targeting
 
-- A lot of information comes in front of us out of which a lot is not useful
-- Adding a **scope** filters the results
-- Go to target tab and select add a scope
+- Setting the scoping lets us define what to proxy and what to not.
+- We can restrict Brup suite to only target the web application that we want to test.
+- Switch to the target tab, right click on our target from the list and choose __Add to scope__.
+- Burp will ask you whether to stop logging anything which is not in the scope.
+- Say yes.
 
+- We can check the scope in the scopes tab.
+- We chose to disable logging out of scope traffic, but burp will still intercept them.
+- To disable this, go to the proxy section and select Add URL Is in Target scope from intercept Client request section.
+- With this option enabled, burp will intercept the traffic only when it is from the scope.
+
+## Site Maps
+
+- Site maps allow us to map our target application in a tree structure.
+- Every page we browse, burp add it in the site map of that application automatically.
+
+
+## Burpsuite Repeater 
+
+- Repeater allows us to craft and/or relay intercepted request to the target.
+- It means after intercepting the request from proxy, we can edit it and resend to the target.
+- We can send the request from the proxy to the repeater by right clicking the request and selecting the **Send to repeater** option.
+
+### Inspector
+
+- Inspector is supplementary to the request and response fields of the Repeater window.
+- Inspector shows the prettified breakdown of the request and response.

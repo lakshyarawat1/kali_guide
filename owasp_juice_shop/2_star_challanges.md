@@ -101,4 +101,45 @@
 - Login as this password to solve the challange.
 - This is an example of sensitive data exposure.
 
-9. 
+9. Visual Geo Stalking (__2 Star__)
+
+- Get the answer to the security question of Emma.
+- Go to photo wall.
+- See the photo of the user e=ma2
+- Open the photo in a new tab.
+- Zoom on the photo to see a logo of the company called ITsec.
+- Enter ITsec as the answer to the security question.
+- Press submit to solve the challange.
+
+10. Meta Geo Stalking (__2 Star__)
+
+- Get the answer to the security question of John.
+- Go to photo wall.
+- See the photo of the user j0hn.
+- See the meta data of the photo using any tool like exiv2 or exiftool.
+- See the coordinates of the photo.
+- Search the coordinates on google maps.
+- The coordinates are of Daniel Boone National Forest.
+- Enter the answer as Daniel Boone National Forest to solve the challange.
+
+
+11. Wierd Crypto (__2 Star__)
+
+- Inform the shop about the algorithm or library that it should not be using.
+- Forge a coupon code that gives you a discount of at least 80%.
+- This shows the z85 exploit.
+- Some other exploits are of base64, hashid, md5 and base85.
+- Go to the customer feedback.
+- Give a feedback mentioning the z85 exploit or any other.
+- Submit the feedback to solve the challange.
+
+12. Empty User Registration (__2 Star__)
+
+- Register a user with the email address and password as empty fields.
+- Go to the register page.
+- Enter the email and password as empty fields.
+- Enter other fields.
+- Inspect the element and remove the disabled property from the submit button.
+- Click on the submit button.
+- Solve the captcha.
+- Challenge solved.
